@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
+    <string name="runbox">Включить</string>
+    <string name="offbox">Выключить</string>
+    <string name="accept">Разрешить</string>
+    <string name="decline">Запретить</string>
+    <string name="doz_on">Включить</string>
+    <string name="doz_off">Выключить</string>
+    <string name="doz_name">Дозатор</string>
+    <string name="mix_name">Миксер</string>
+    <string name="mix_off">Не работает</string>
+    <string name="mix_on">Работает</string>
+    <string name="button_stop">Остановить</string>
+    <string name="button_start">Запустить</string>
 </resources>
