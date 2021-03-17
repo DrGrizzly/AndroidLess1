@@ -12,4 +12,8 @@
     <string name="mix_on">Работает</string>
     <string name="button_stop">Остановить</string>
     <string name="button_start">Запустить</string>
+    <string name="brn_one">1</string>
+    <string name="btn_two">2</string>
+    <string name="bth_thre">3</string>
+    <string name="btn_three">3</string>
 </resources>
