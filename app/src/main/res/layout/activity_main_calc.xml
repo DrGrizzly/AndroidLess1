@@ -18,10 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_view_margin"
-            android:layoutDirection="rtl"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
             android:text="0"
-            android:textAlignment="textStart"
-            android:textSize="@dimen/text_view_font_size" />
+            android:textSize="@dimen/text_view_font_size"
+            android:textStyle="bold" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -197,7 +198,7 @@
                 android:gravity="right">
 
                 <Button
-                    android:id="@+id/btn_0"
+                    android:id="@+id/button_zero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/button_margin"
