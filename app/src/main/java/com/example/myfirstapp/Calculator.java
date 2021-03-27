@@ -5,6 +5,7 @@ import android.widget.Toast;
 public class Calculator {
     private StringBuilder inputNumber;
     private StringBuilder operation;
+    private StringBuilder operLog;
     private boolean newValue;   //Флаг ввода первого значения
     private boolean funcSet;    //Флаг выбора функции
     final int NUMBER_ARR_MAX_VAL = 100; //100 - Количество сохраненных значений
@@ -14,6 +15,7 @@ public class Calculator {
     Calculator() {
         inputNumber = new StringBuilder("0");
         operation = new StringBuilder();
+        operLog = new StringBuilder();
         newValue = true; //Подняли флаг ввода нового значения
         funcSet = false; //Запрещаем нажатие функций
         numberIdx = 0; //Индекс сохраненных чисел
@@ -41,11 +43,20 @@ public class Calculator {
     }
 
     /**
+     * Вывод лога операций
+     * @return
+     */
+    public String getOperLog() {
+        return operLog.toString();
+    }
+
+    /**
      * Очищает весь стек данных
      */
     public void clearAll() {
         inputNumber = new StringBuilder("0");
         operation = new StringBuilder();
+        operLog = new StringBuilder();
         numberArr = new double[NUMBER_ARR_MAX_VAL]; //Сбросим массив сохраненных значений
         numberIdx = 0; //Сбросим индекс массива сохраненных значений
         newValue = true;
@@ -78,6 +89,7 @@ public class Calculator {
             validateNumber(); //Приведем в норму полученное значение
             numberArr[numberIdx] = Double.parseDouble(inputNumber.toString());
             numberIdx++;
+            operLog.append(inputNumber.toString());
             clearVal();
         } catch (Exception ex) {
             clearAll(); //Сбросим все
@@ -93,6 +105,7 @@ public class Calculator {
         if (!funcSet) return;
         saveVal();        //Сохраним в стек введенное значение
         operation.append(func);
+        operLog.append(func);
         funcSet = false;  //Запрещаем повторное нажатие функциональной кнопки
     }
 

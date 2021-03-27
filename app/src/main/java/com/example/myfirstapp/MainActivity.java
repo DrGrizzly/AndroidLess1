@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_point;
     Button btn_result;
     TextView labelResult;
+    TextView labelLog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btn_div = findViewById(R.id.button_div);
         btn_result = findViewById(R.id.button_result);
         labelResult = findViewById(R.id.textView);
+        labelLog = findViewById(R.id.textLog);
 
         btn_1.setOnClickListener(v -> setNumber("1"));
         btn_2.setOnClickListener(v -> setNumber("2"));
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void printValue() {
         labelResult.setText(calc.getInputNumber());
+        labelLog.setText(calc.getOperLog());
     }
 
     private void clearAll() {
