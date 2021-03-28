@@ -13,4 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.MyFirstAppLight" parent="Theme.MyFirstApp">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#C8DF60</item>
+        <item name="colorPrimaryVariant">#58CC54</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#EA73F3</item>
+        <item name="colorSecondaryVariant">#4264E3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>
